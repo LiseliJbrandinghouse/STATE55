@@ -1,0 +1,143 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="hero">
+  <div class="hero-overlay">
+    <h1 class="slide-left">Africa's Biggest</h1>
+    <h1 class="slide-right">Digital Trade Place</h1>
+  </div>
+</div>
+
+<h4
+  class="safari-tagline"
+  id="greetingMessage"
+  style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 300px; /* Adjust the height as needed */
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 30px;
+    text-align: center;
+    background: url('/static/images/greetingsback.png') no-repeat center center;
+    background-size: cover;
+    color: white; /* Ensures the text is readable over the background */
+  "
+>
+  Welcome to State55, Africa's digital trading place
+</h4>
+
+<section class="african-safari">
+  <div class="safari-content">
+    
+    <h1 class="safari-title">Join the Exchange</h1>
+    <p class="safari-description">
+      The Exchange is envisaged to become the communication hub for all African
+      commercial activities including:
+      <ul>
+      <li>The Afrika Stock Exchange</li>
+      <li>The Afrika Commodity Exchange </li>
+      <li>The Afrika Metal Exchange </li>
+      <li> The Afrika Job Centre</li>
+      <li>The Afrika Trade Centre</li>
+      <li>The Afrika Investment Centre</li>
+      <li>The Immigration Platform</li>
+      </ul>
+    </p>
+    <button class="membership-btn">more about us</button>
+  </div>
+  <div class="safari-image-container">
+    <div class="map-africa">
+      <img
+        src="{% static 'images/african.jpg' %}"
+        alt="African Safari Map"
+        class="map-img"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="membership-section">
+  <div class="membership-content">
+    <h1 class="membership-title">Benefits of membership</h1>
+    <p class="membership-description">
+      access to relevant information · access to business proposals · ease of doing business · 
+      opportunities to invest in priority sectors · credibility of information accessed · 
+      skills and job matching across the continent
+    </p>
+    <button class="membership-btn">Become a member</button>
+  </div>
+</section>
+
+
+<section class="image-strip-section">
+  <img src="{% static 'images/patterns.png' %}" alt="Strip Image" class="image-strip">
+</section>
+
+<section class="empowering-section">
+  <div class="empowering-content">
+    <h1 class="empowering-title">Empowering & uplifting</h1>
+    <p class="empowering-description">
+      Our goal is to build a powerful coalition that transforms resource trading into a vehicle for economic empowerment and social upliftment. Together, we can create a thriving ecosystem where Afrikans are not just spectators in the global market but leaders who shape its direction, securing a prosperous future for generations to come.
+    </p>
+    <a href="#" class="empowering-btn">Find out more</a>
+  </div>
+  <div class="empowering-image-container">
+    <img src="{% static 'images/moa.jpg' %}" alt="Market Scene" class="empowering-image">
+  </div>
+</section>
+
+
+
+
+
+<script>
+  // JavaScript for Sliding Animation
+  window.onload = function () {
+    document.getElementById("state").classList.add("slide-in");
+    document.getElementById("fifty-five").classList.add("slide-in-delay");
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    const greetings = [
+      "Karibu! Karibu State 55, Africa's Digital Trading Place (Swahili)",
+      "በደህና መጡ! በአፍሪካ ዲጂታል መነሻ ስፍራው 55 (Amharic)",
+      "Ẹ ku abọ! Ẹ ku State 55, Africa's Digital Trading Place (Yoruba)",
+      "Siyakwamukela! Wamukelekile ku-State 55, Africa's Digital Trading Place (Zulu)",
+      "Maraba da zuwa! Maraba zuwa State 55, Africa's Digital Trading Place (Hausa)",
+      "أهلا وسهلا! مرحبًا بك في State 55، المكان الرقمي للتجارة في إفريقيا (Arabic)",
+      "Nnọọ! Nnọọ na State 55, Africa's Digital Trading Place (Igbo)",
+      "Mauya! Mauya ku-State 55, Africa's Digital Trading Place (Shona)",
+      "Baga Gamadaa! Baga State 55, Africa's Digital Trading Place (Oromo)",
+      "Welkom! Welkom by State 55, Africa's Digital Trading Place (Afrikaans)",
+      "Bienvenue! Bienvenue à State 55, la place de marché numérique d'Afrique (French)",
+      "Bem-vindo! Bem-vindo ao State 55, a praça digital da África (Portuguese)",
+      "Akwaaba! Akwaaba wɔ State 55, Africa's Digital Trading Place (Twi)",
+      "Soo Dhawoow! Soo Dhawoow State 55, Africa's Digital Trading Place (Somali)",
+      "Mbote! Mbote na State 55, Africa's Digital Trading Place (Lingala)",
+    ];
+
+    let currentIndex = 0;
+    const greetingElement = document.getElementById("greetingMessage");
+
+    // Function to rotate through the greetings
+    function rotateGreetings() {
+      // Fade out current greeting
+      greetingElement.classList.add("hidden");
+
+      setTimeout(() => {
+        // Change the greeting text after the fade out
+        greetingElement.textContent = greetings[currentIndex];
+
+        // Fade in new greeting
+        greetingElement.classList.remove("hidden");
+
+        // Move to the next greeting in the array
+        currentIndex = (currentIndex + 1) % greetings.length;
+      }, 1000); // Time to wait for fade-out before changing the text
+    }
+
+    // Set interval to change the greeting every 3 seconds
+    setInterval(rotateGreetings, 10000);
+  });
+</script>
+{% endblock %}

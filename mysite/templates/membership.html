@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<title>Membership Cards</title>
+  
+</head>
+<body>
+<div class="membership-info">
+    <h2>Become a Member Today!</h2>
+    <p>Unlock exclusive features and enjoy all the benefits that come with being a valued member. </p> <p>Choose the plan that suits you and start enjoying premium perks, tailored services, and much more.</p>
+    <button class="membership-btn">Join Now</button>
+  </div>
+
+<section class="about-image-strip">
+  <img src="{% static 'images/patterns.png' %}" alt="Image Strip" class="image-strip">
+</section>
+    <div class="pricing-table">
+    <!-- Basic Plan -->
+    <div class="pricing-plan basic-plan">
+      <h3>Basic</h3>
+      <div class="price">$19 <span>Per Month</span></div>
+      <ul>
+        <li><span class="checkmark">✔</span> Sample Text Here</li>
+        <li><span class="checkmark">✔</span> Other Text Title</li>
+        <li><span class="crossmark">✘</span> Text Space Goes Here</li>
+        <li><span class="crossmark">✘</span> Description Space</li>
+        <li><span class="crossmark">✘</span> Sample Text Here</li>
+      </ul>
+      <button class="membership-btn">Buy Now</button>
+    </div>
+
+    <!-- Standard Plan -->
+    <div class="pricing-plan standard-plan">
+      <h3>Standard</h3>
+      <div class="price">$29 <span>Per Month</span></div>
+      <ul>
+        <li><span class="checkmark">✔</span> Sample Text Here</li>
+        <li><span class="checkmark">✔</span> Other Text Title</li>
+        <li><span class="checkmark">✔</span> Text Space Goes Here</li>
+        <li><span class="crossmark">✘</span> Description Space</li>
+        <li><span class="crossmark">✘</span> Sample Text Here</li>
+      </ul>
+      <button class="membership-btn">Buy Now</button>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="pricing-plan premium-plan">
+      <h3>Premium</h3>
+      <div class="price">$39 <span>Per Month</span></div>
+      <ul>
+        <li><span class="checkmark">✔</span> Sample Text Here</li>
+        <li><span class="checkmark">✔</span> Other Text Title</li>
+        <li><span class="checkmark">✔</span> Text Space Goes Here</li>
+        <li><span class="checkmark">✔</span> Description Space</li>
+        <li><span class="checkmark">✔</span> Sample Text Here</li>
+      </ul>
+      <button class="membership-btn">Buy Now</button>
+    </div>
+  </div>
+</body>
+  {% endblock %}

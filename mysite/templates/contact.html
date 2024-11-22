@@ -1,0 +1,89 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="contact-section">
+  <div class="contact-container">
+    <!-- Left Text Section -->
+    <div class="contact-text">
+      <h2>Get in Touch</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+        Donec id neque quis nulla bibendum cursus non a purus.
+      </p>
+      <p>
+        Aliquam erat volutpat. Duis sit amet convallis elit, sed vehicula lacus.
+        Nullam eget lacus non odio lobortis vestibulum.
+      </p>
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="contact-form">
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+        ></textarea>
+
+        <button type="submit" class="membership-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="about-image-strip">
+  <img
+    src="{% static 'images/patterns.png' %}"
+    alt="Image Strip"
+    class="image-strip"
+  />
+</section>
+
+<section class="branches-section">
+  <h2 class="branchh">Branches</h2>
+  <div class="branches-container">
+    <div class="branch-card">
+      <div class="card-image">
+        <img src="branch1.jpg" alt="Branch 1" />
+      </div>
+      <div class="card-content">
+        <h3>Branch 1</h3>
+        <p>Branch 1 info goes here.</p>
+      </div>
+    </div>
+    <div class="branch-card">
+      <div class="card-image">
+        <img src="branch2.jpg" alt="Branch 2" />
+      </div>
+      <div class="card-content">
+        <h3>Branch 2</h3>
+        <p>Branch 2 info goes here.</p>
+      </div>
+    </div>
+    <div class="branch-card">
+      <div class="card-image">
+        <img src="branch3.jpg" alt="Branch 3" />
+      </div>
+      <div class="card-content">
+        <h3>Branch 3</h3>
+        <p>Branch 3 info goes here.</p>
+      </div>
+    </div>
+    <div class="branch-card">
+      <div class="card-image">
+        <img src="{% static 'images/bola.jpg' %}" alt="Branch 4" />
+      </div>
+      <div class="card-content">
+        <h3>Branch 4</h3>
+        <p>Branch 4 info goes here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
